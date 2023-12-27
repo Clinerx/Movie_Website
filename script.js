@@ -1,13 +1,20 @@
+// * This API is for movie cards
 const APIURL = "https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1";
+// * This one is for showing the picture
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
+// * This API is for searching movies
 const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
+// * getting variables inside HTML
 const main = document.getElementById("content");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
-// initially get fav movies
+// * initially get fav movies
 getMovies(APIURL);
 
+/* This function is to get or fetch a data from
+ the API that has been provided
+*/
 async function getMovies(url) {
     const resp = await fetch(url);
     const respData = await resp.json();
@@ -40,6 +47,7 @@ function showMovies(movies) {
     });
 }
 
+// * This funtion is to show the rate of each movie
 function getClassByRate(vote) {
     if (vote >= 8) {
         return "green";
@@ -50,6 +58,7 @@ function getClassByRate(vote) {
     }
 }
 
+// * This function is after cliking enter it will go to the related movie
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchTerm = search.value;
