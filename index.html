@@ -1,62 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <div class="bg-img">
-        <div class="nav">
-            <span><a href="#">Home</a></span>
-            <span><a href="#">Service</a></span></div>
-            <div class="logo">
-                <img src="" alt="" width="150" height="150">
-            </div>
-            <span><a href="">Series</a></span>
-            <span><a href="">Kids</a></span>
-    </div>
-
-    <section class="content-section">
-        <div class="info-container">
-            <div class="details-container">
-                <div class="logo-container title-info">
-                    <h1></h1>
-                </div>
-            </div>
-            <div class="title-info-metadata-wrapper">
-                <span class="title-info-metadata item-year">
-                    <span></span>
-                </span>
-                <!-- * Info-spacer 1 -->
-                <span class="info-spacer"> | </span>
-                <span class="title-info-metadata-item item-maturity">
-                    <span class="maturity-number"></span>
-                </span>
-                <!-- * Info-spacer 2 -->
-                <span class="info-spacer"> | </span>
-                <span class="title-info-metadata-item item-vote">
-                    <span class="duration vote-average"></span>
-                </span>
-                <!-- * Info-spacer 3 -->
-                <span class="info-spacer"> | </span>
-                <span class="title-info-metadata-item item-language">
-                    <span class="language"></span>
-                </span>
-            </div>
-            <div>
-                <div class="info-title-synopsis">
-
-                </div>
-            </div>
-            <div class="btn">
-                <button class="btn-play">Play Now</button>
-                <div class="list">
-                    <span>List</span>    
-                </div>
-            </div>
-        </div>
-    </section>
+    <header>
+        <h1>Movie Search</h1>
+        <form id="form">
+            <input type="text" id="search" placeholder="Search" class="search" />
+        </form>
+    </header>
+    <div id="content"></div>
 </body>
+
 </html>
